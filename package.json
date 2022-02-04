@@ -1,0 +1,24 @@
+{
+  "name": "polygon-road-toweb3-file-validator",
+  "version": "1.0.0",
+  "description": "Web3 Dapp on Polygon which stores SHA256 of files to blockchain and verifies origin in form of address and displays hash.",
+  "main": "index.js",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smrza/polygon-roadtoweb3-file-validator-project.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smrza/polygon-roadtoweb3-file-validator-project/issues"
+  },
+  "homepage": "https://github.com/smrza/polygon-roadtoweb3-file-validator-project#readme"
+}
