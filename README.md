@@ -2,32 +2,32 @@
 Web3 Dapp on Polygon which stores SHA256 of files to blockchain and can verifies origin in form of address and displays hash.
 
 ## Libraries
-* lite-server: https://www.npmjs.com/package/lite-server/v/2.5.3
-* ethers.js: https://docs.ethers.io/v5/
-* bootstrap: https://github.com/twbs/bootstrap
-* Ethereum Provider API: https://docs.metamask.io/guide/ethereum-provider.html
-* Crypto.subtle: https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle
+* lite-server: <https://www.npmjs.com/package/lite-server/v/2.5.3>
+* ethers.js: <https://docs.ethers.io/v5/>
+* bootstrap: <https://github.com/twbs/bootstrap>
+* Ethereum Provider API: <https://docs.metamask.io/guide/ethereum-provider.html>
+* Crypto.subtle: <https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle>
 
 ## Deploy
 ```
 npm install
 npm run dev
 ```
-http://localhost:3000/
+<http://localhost:3000/>
 
 
 ## Contracts
-Polygon Mumbai Testnet -> https://mumbai.polygonscan.com/address/0xAa9C2d018CB62f8Ba3e5041cE095f86fA325bA8c
+Polygon Mumbai Testnet -> <https://mumbai.polygonscan.com/address/0xAa9C2d018CB62f8Ba3e5041cE095f86fA325bA8c>
 
 ## Usage
-1. Make sure you have Metamask extension installed. If not, go to: https://metamask.io/
-2. Project uses Mumbai Testnet. Learn how to configure network at https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/
+1. Make sure you have Metamask extension installed. If not, go to: <https://metamask.io/>
+2. Project uses Mumbai Testnet. Learn how to configure network at <https://docs.polygon.technology/docs/develop/metamask/config-polygon-on-metamask/>
     * Network name: Matic Mumbai
-    * RPC: https://rpc-mumbai.maticvigil.com/
+    * RPC: <https://rpc-mumbai.maticvigil.com/>
     * Chain ID: 80001
     * Currency Symbol (optional): MATIC
-    * Block Explorer URL (optional): https://mumbai.polygonscan.com/
-3. Get MATIC at https://faucet.polygon.technology/
+    * Block Explorer URL (optional): <https://mumbai.polygonscan.com/>
+3. Get MATIC at <https://faucet.polygon.technology/>
 4. Connect Metamask wallet to localhost app.
 5. Import file
 5a. of which hash you want to add to blockchain and press Add File To Polygon. Sign the transaction which pops up.
