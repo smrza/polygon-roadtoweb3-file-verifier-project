@@ -1,0 +1,31 @@
+h1{ 
+    color: #337ab7;
+    font-weight: bold;
+}
+
+body {
+    background-image: url("../img/sign03.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header {
+    margin-top: 1em;
+}
+
+.login {
+    margin-top: 1em;
+}
+
+
+
+footer {
+    background-color: black;
+    color: #878787;
+    flex-shrink: initial;
+    height: 5em;
+    margin-top: 220px;
+    padding: 28px 0;
+    text-align: center;
+}
+

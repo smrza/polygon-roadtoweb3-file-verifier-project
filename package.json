@@ -4,7 +4,8 @@
   "description": "Web3 Dapp on Polygon which stores SHA256 of files to blockchain and verifies origin in form of address and displays hash.",
   "main": "index.js",
   "dependencies": {
-    "lite-server": "^2.6.1"
+    "lite-server": "^2.6.1",
+    "require": "^2.4.20"
   },
   "devDependencies": {},
   "scripts": {
