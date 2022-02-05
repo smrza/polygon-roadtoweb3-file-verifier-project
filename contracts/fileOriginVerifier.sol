@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract FileOriginValidator {
+contract FileOriginVerifier {
 
     event AddFile(address _addedBy, bytes32 _fileHash);
 
@@ -26,7 +26,7 @@ contract FileOriginValidator {
         return true;
     }
 
-    function validateFileOrigin(
+    function verifyFileOrigin(
       address _originAddress,
       bytes32 _fileHash
     ) external view returns (bool) {
