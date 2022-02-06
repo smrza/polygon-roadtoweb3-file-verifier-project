@@ -36,14 +36,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     const handleAccountsConnected = async () => {
         const accounts = await ethereum.request({ method: 'eth_accounts' });
+        document.getElementById("origin-address-verification").hidden = true;
+        document.getElementById("verification").hidden = true;
+        document.getElementById("file-stored").hidden = true;
+        document.getElementById('ver-address').value = '';
         if (accounts.length < 1) {
             onboardButton.disabled = false;
-            document.getElementById("connected-wallet").innerText = "Connected wallet: ";
             document.getElementById("connected-wallet").hidden = true;
             document.getElementById("verify-file").disabled = true;
             document.getElementById("get-origin").disabled = true;
             document.getElementById("ver-address").disabled = true;
             document.getElementById("add-file").disabled = true;
+            onboardButton.innerText = "Connect Wallet";
         }
         else {
             const accounts = await ethereum.request({ method: 'eth_accounts' });
@@ -143,7 +147,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById("get-origin").addEventListener("click", function () {
         if (hash != undefined) {
             contract.getFileOrigin(hash)
-                .then((address) => document.getElementById("ver-address").value = address, originAddress = hash)
+                .then((address) => {
+                    document.getElementById("ver-address").value = address, 
+                    originAddress = hash
+                    document.getElementById("origin-address-verification").hidden = true;
+                })
                 .catch(() => {
                     document.getElementById("origin-address-verification").hidden = false;
                     document.getElementById("origin-address-verification").innerText = "Hash not found in the blockchain.";
