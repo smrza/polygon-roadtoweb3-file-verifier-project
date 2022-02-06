@@ -7,6 +7,7 @@ Web3 Dapp on Polygon which stores SHA256 of files to blockchain and can verifies
 * bootstrap: <https://github.com/twbs/bootstrap>
 * Ethereum Provider API: <https://docs.metamask.io/guide/ethereum-provider.html>
 * Crypto.subtle: <https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle>
+* Metamask Onboarding: <https://docs.metamask.io/guide/onboarding-library.html>
 
 ## Deploy
 ```

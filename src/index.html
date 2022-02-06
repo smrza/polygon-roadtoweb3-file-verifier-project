@@ -1,36 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>File Origin Validator</title>
-
+    <title>File Verifier</title>
     <!-- Bootstrap -->
+    <link rel="icon" type="image/ico" href="/img/favicon.ico">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-
 </head>
 
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.2/ethers.umd.min.js"></script>
-    <script src="js/app.js"></script>
-
-
-    <div class="container header">
+    <div class="container one-em-top">
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <h1 class="text-center">SHA256 Verifier of your files</h1>
-            </div>
-            <div class="col-md-1">
-            </div>
-            <div class="col-md-1 login">
-                <button class="btn btn-primary">Connect wallet</button>
-            </div>
-            <div class="col-md-1 login">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <h1 class="text-center">Verify your files with SHA256 and Polygon</h1>
             </div>
         </div>
         <hr>
@@ -38,40 +25,90 @@
 
     <div class="container">
         <div class="row">
-            <!-- TODO: add a label for connected address string -->
-            <!-- <button class="btn btn-primary btn-wallet" type="button">Connect Wallet</button>
-            <p id="connected-wallet"> Connected wallet address: </p> -->
+            <h2>File</h2>
+            <div class="col-md-3">
+                <label for="file-input" class="btn btn-primary btn-lg btn-block">
+                    Choose File
+                </label>
+                <input type="file" id="file-input" onchange="fileUpload()" />
+            </div>
+            <div class="col-md-9 one-em-top">
+                <p id="file-hash"></p>
+            </div>
         </div>
+        <hr>
+        <div class="row">
+            <h2>Wallet</h2>
+            <div class="col-md-3">
+                <button id="connect-wallet" class="btn btn-primary btn-lg btn-block" type="button">Connect
+                    Wallet</button>
+            </div>
+            <div class="col-md-9 one-em-top">
+                <p id="connected-wallet" hidden></p>
+            </div>
+        </div>
+        <hr>
 
         <div class="row">
-            <h2>Upload new file</h2>
-            <input type="file" id="fileinput" onchange="fileUpload()">
-            <p id="upload-hash"></p>
-            <!--TODO: import file and get its hash -->
-            <button id="add-file" class="btn btn-primary btn-save" type="button">Save to the blockchain</button>
+            <h2>Store</h2>
+            <div class="col-md-3">
+                <button id="add-file" class="btn btn-success btn-lg btn-block" type="button">Store Hash To
+                    Blockchain</button>
+            </div>
+            <div class="col-md-9 one-em-top">
+                <p id="file-stored" hidden> Done! Tx: </p>
+            </div>
         </div>
+        <hr>
+    </div>
 
-        <HR>
-
+    <div class="container">
         <div class="row">
-            <h2>File verification</h2>
-            <input type="text" id="ver-address" size="50" placeholder="Insert origin address">
-            <button id="verify-file" class="btn btn-success btn-verify" type="button">Verify file</button>
-            <p id="verification" style="color:green; font-weight: bold;"></p>
-            <button id="get-origin" class="btn btn-default btn-origin" type="button">Get origin address</button>
-            <span id="origin-address-verification"></span>
+            <h2>Verify</h2>
+            <div class="col-md-3">
+                <input type="text" id="ver-address" size="44" placeholder="Input or get origin address..."
+                    style="height:46px;font-size:14pt;">
+            </div>
         </div>
     </div>
 
+
+    <div class="container one-em-top">
+
+        <div class="row">
+            <div class="col-md-3">
+                <button id="get-origin" class="btn btn-success btn-lg btn-block" type="button">Get Origin
+                    Address</button>
+            </div>
+            <div class="col-md-9 one-em-top">
+                <p id="origin-address-verification" hidden></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container one-em-top">
+        <div class="row">
+            <div class="col-md-3">
+                <button id="verify-file" class="btn btn-success btn-lg btn-block" type="button">Verify
+                    file</button>
+            </div>
+            <div class="col-md-9 one-em-top">
+                <p id="verification" style="color:green; font-weight: bold;"></p>
+            </div>
+        </div>
+
+    </div>
 
     <footer>
         <span>Copyright © 2022, All Rights Reserved</span>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.2/ethers.umd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="js/web3.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/metamask-onboarding.bundle.js"></script>
     <script src="js/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </body>
 
 

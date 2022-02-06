@@ -1,31 +1,63 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    padding: 40px;
+    background-color: #b06e5d;
+    color: white;
+    text-align: center;
+  }
+
+body {
+    background-image: url("../img/inspect.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: bottom 100px right 0px;
+}
+
 h1{ 
-    color: #337ab7;
+    color: #000000;
     font-weight: bold;
 }
 
-body {
-    background-image: url("../img/sign03.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+h2{ 
+    color: #000000;
+    font-weight: bold;
 }
 
-.header {
+.one-em-top {
     margin-top: 1em;
 }
 
-.login {
-    margin-top: 1em;
+input[type="file"] {
+    display: none;
 }
 
-
-
-footer {
-    background-color: black;
-    color: #878787;
-    flex-shrink: initial;
-    height: 5em;
-    margin-top: 220px;
-    padding: 28px 0;
-    text-align: center;
+.fixed{
+    width: 300px;
 }
 
+.btn-primary{
+    background-color: #b0975d !important;
+    outline: #806e3b !important;
+}
+
+.btn-primary:hover:enabled{
+    background: #9c8850 !important;
+}
+
+.btn-primary:active:enabled{
+    background-color: #806e3b !important;
+}
+
+.btn-primary:visited:enabled{
+    background-color: #9c8850 !important;
+}
+
+p{
+    font-weight: bold;
+    font-size: medium;
+}
